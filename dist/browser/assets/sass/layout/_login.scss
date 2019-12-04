@@ -1,0 +1,130 @@
+.lo-container{
+    @include mediaquery(small){
+        display:grid;
+        height:100%;
+        grid-template-columns:1fr;
+        grid-template-rows:1fr;
+        align-items:center;
+        justify-content: center;
+    }
+}
+
+.card{
+    @include mediaquery(small){
+        background-color:#fff;
+        margin:0 1rem;
+        width:calc(100vw - 30px);
+        grid-column:1/2;
+        grid-row:1/2;
+        text-align: center;
+        justify-self: center;
+        padding:1rem;
+        border-radius:5px;
+        box-shadow: 0 4px 20px 0 rgba(0,0,0,.14);
+        position:relative;
+        margin-top:$topEspacio;
+    }
+    @include mediaquery(medium){
+        margin:0;
+        width:350px;
+        padding:1rem 2rem;
+    }
+}
+
+
+.card-header{
+   @include mediaquery(small){
+    position: absolute;
+    top:-$topEspacio;
+    color:white;
+    background:linear-gradient(60deg,#ec407a,#d81b60);
+    width:92%;
+    border-radius:5px;
+    padding:2rem .5rem;
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(233,30,99,.4);
+   }
+   @include mediaquery(medium){
+      left:12.8px;
+   }
+}
+
+.card-header__title{
+    font-weight: 700;
+
+}
+
+.card-header__redes{
+    @include mediaquery(small){
+        width:60%;
+        margin:0 auto;
+        padding-top:1rem;
+        display:flex;
+        justify-content: space-around;
+    }
+}
+
+.card__content{
+    @include mediaquery(small){
+        position:relative;
+        height:100%;
+        width:100%;
+    }
+}
+
+.card__intermedio{
+    padding-top:5.5rem;
+    color:#999;
+}
+
+.form{
+    @include mediaquery(small){
+        display:flex;
+        flex-direction: column;
+        padding-top:.5rem;
+    }
+}
+
+.form__group{
+    @include mediaquery(small){
+        display:flex;
+        justify-content: center;
+    }
+}
+
+.form__button{
+    @include mediaquery(small){
+        color:#e91e63;
+        margin:.5rem 0px !important;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+}
+
+.form__icon{
+    @include mediaquery(small){
+        padding-top:18px;
+        padding-right:10px;
+        color:#495057;
+    }
+}
+
+.form__input{
+    @include mediaquery(small){
+        width:100%;
+        padding-right:10px;
+    }
+}
+
+.card__footer{
+    padding-top:.8rem;
+    padding-bottom:.8rem;
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+}
+
+.card__footer a{
+    color:#0062cc;
+}
+
+

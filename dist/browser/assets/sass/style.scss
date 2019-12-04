@@ -1,0 +1,18 @@
+// Configuración
+@import 'config/vars';
+@import 'config/mixins';
+
+// Base
+@import 'base/base';
+@import 'base/typography';
+
+// Elementos Reutilizables
+@import 'utilities/buttons';
+
+// Importar Layouts
+@import 'layout/auth';
+@import 'layout/login.scss';
+@import 'layout/register';
+
+// Importar Componentes
+@import 'components/dashboard';
