@@ -1,0 +1,50 @@
+// Custom Properties
+:root{
+    // Variables de apilamiento (z-index)
+    --z-back: -10; 
+    --z-normal: 10;
+    --z-tooltip: 20;
+    --z-fixed: 30;
+    --z-modal: 40;
+    
+    // Otras variables
+    --font-size:16px;                  // -> base
+    --main-font:'Nunito';
+    --main-alternate-font: sans-serif;
+}
+
+
+//Colores
+$colores: (
+    primary: #0052CC,
+    secondary: #FFFFFF,
+    accent: #333333,
+    warning:#D15454,    
+    success:#5DB75B,
+    enlace:#788D9F
+);
+
+// Pensando Movil First    =>  16:9  tiene  (1366 * 768)  - (1920 * 1080) - (1600 * 900)
+$breakpoints:(
+    small:0px,  
+    medium:425px,    
+    large:768px,     
+    xlarge:1200px 
+);
+
+// Typography
+$fonts:(
+    title1: 50px 60px,
+    title2: 32px 40px,
+    title3: 20px 22px,
+    base: 20px 30px,
+    small: 16px 22px,
+    smaller: 12px 18px
+);
+
+//Login 
+$topEspacio:45px;
+
+
+
+

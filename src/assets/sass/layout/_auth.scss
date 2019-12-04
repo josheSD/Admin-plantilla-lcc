@@ -1,0 +1,25 @@
+.main-banner{
+    @include mediaquery(small){
+        width:100vw;
+        height:100vh;
+    }
+}
+
+.main-banner__hero-imagen{
+    @include mediaquery(small){
+        height:100%;
+        width:100%;
+        background-size:cover;
+        object-fit:cover;
+        position: absolute;
+    }
+}
+
+.main-banner__content{
+    @include mediaquery(small){
+        position:relative;
+        height:100%;
+        width:100%;
+        background-color:rgba(0,0,0,.5);
+    }
+}

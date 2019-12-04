@@ -1,0 +1,41 @@
+<div class="lo-container">
+    <div class="card">
+        <div class="card-header">
+            <p class="card-header__title title3">Login</p>
+            <div class="card-header__redes">
+                <mat-icon>face</mat-icon>
+                <mat-icon>face</mat-icon>
+                <mat-icon>face</mat-icon>
+            </div>
+        </div>
+        <div class="card__content">
+            <p class="card__intermedio">O</p>
+            <form class="form">
+                <div class="form__group">
+                    <div class="form__icon">
+                            <mat-icon>email</mat-icon>
+                    </div>
+                    <mat-form-field class="form__input" color="primary" floatLabel="never">
+                        <input type="text" matInput placeholder="Correo" autocomplete="off">
+                    </mat-form-field>
+                </div>
+                <div class="form__group">
+                    <div class="form__icon">
+                            <mat-icon>lock_outline</mat-icon>
+                    </div>
+                    <mat-form-field class="form__input" color="primary" floatLabel="never">
+                        <input type="password" matInput placeholder="Contraseña" autocomplete="off">
+                    </mat-form-field>
+                </div>
+                <div class="form__group">
+                    <button class="form__button" mat-button (click)="Login()">Ingresar</button>
+                </div>
+            </form>
+        </div>
+        <div class="card__footer">
+            <span>¿ No tienes cuenta ?</span>
+            <a class="link" [routerLink]="['/register']">Crear cuenta</a>
+        </div>
+    </div>
+    
+</div>

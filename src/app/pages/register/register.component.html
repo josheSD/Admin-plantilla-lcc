@@ -1,0 +1,51 @@
+<div class="re-container">
+        <div class="re-card">
+            <div class="re-card__title">
+                <h3 class="title3">Registrar</h3>
+            </div>
+            <div class="re-card__content">
+                <form class="form">
+                    <div class="form__group">
+                        <div class="form__icon">
+                            <mat-icon>face</mat-icon>
+                        </div>
+                        <mat-form-field class="form__input" color="primary" floatLabel="never">
+                            <input type="text" matInput placeholder="Nombre" autocomplete="off">
+                        </mat-form-field>
+                    </div>
+                    <div class="form__group">
+                        <div class="form__icon">
+                                <mat-icon>email</mat-icon>
+                        </div>
+                        <mat-form-field class="form__input" color="primary" floatLabel="never">
+                            <input type="text" matInput placeholder="Correo" autocomplete="off">
+                        </mat-form-field>
+                    </div>
+                    <div class="form__group">
+                        <div class="form__icon">
+                                <mat-icon>lock_outline</mat-icon>
+                        </div>
+                        <mat-form-field class="form__input" color="primary" floatLabel="never">
+                            <input type="password" matInput placeholder="Contraseña" autocomplete="off">
+                        </mat-form-field>
+                    </div>
+                    <div class="form__group">
+                        <div class="form__icon">
+                                <mat-icon>lock_outline</mat-icon>
+                        </div>
+                        <mat-form-field class="form__input" color="primary" floatLabel="never">
+                            <input type="password" matInput placeholder="Confirmar contraseña" autocomplete="off">
+                        </mat-form-field>
+                    </div>
+                    <div class="form__group">
+                        <button class="form__button" mat-button>Registrarme</button>
+                    </div>
+                </form>
+            </div>
+            <div class="re-card__footer">
+                <span>¿Tienes una cuenta?</span>
+                <a class="link" [routerLink]="['/login']">Ingresa ahora</a>
+            </div>
+        </div>
+        
+    </div>
