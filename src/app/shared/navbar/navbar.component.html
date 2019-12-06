@@ -1,4 +1,5 @@
 <div class="l-navbar">
+
     <!-- Movil Hamburgesa -->
     <div class="hamburger hamburger--slider" id="hamburger">
         <span class="hamburger__box">
@@ -8,11 +9,23 @@
 
     <!-- Table ++  -->
     <div class="navbar">
-        <button class="navbar__button-circle" matRipple>
-                <mat-icon>view_list</mat-icon>
-        </button>
+
+        <div class="navbar__content">
+            <button class="navbar__button-circle" matRipple (click)="cambiarFormatoSidebar()">
+                <mat-icon>{{imagenSidebar}}</mat-icon>
+            </button>
+            <span>{{rutaActual}}</span>
+        </div>
         
-        <img class="navbar__photo"src="./../../../assets/img/admin/usuario.png"  alt="usuario">
+        <img class="navbar__photo" [matMenuTriggerFor]="usuarioMenu" src="./../../../assets/img/admin/usuario.png"  alt="usuario">
+
+        <mat-menu #usuarioMenu="matMenu">
+            <button mat-menu-item (click)="routerDashboard()">Dashboard</button>
+            <button mat-menu-item (click)="routerMyProfile()">My Profile</button>
+            <button mat-menu-item (click)="routerConfiguration()">Settings</button>
+            <button mat-menu-item (click)="routerSingOut()">Sing Out</button>
+        </mat-menu>
+
     </div>
 
 </div>

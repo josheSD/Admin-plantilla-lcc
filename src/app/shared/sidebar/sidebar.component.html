@@ -1,3 +1,36 @@
-<div class="parrafo">
-    <p>sidebar works!</p>
+<div class="l-sidebar">
+    <div class="sidebar__enterprise">
+        <img class="sidebar_photo" src="../../../assets/img/admin/Angular.png" alt="empresa">
+        <p>Ugel Admin</p>
+    </div>
+    <div class="sidebar__items">
+        
+        <div class="sidebar__user" (click)="activarAccordion()">
+            <img class="sidebar__user-icon" src="../../../assets/img/admin/usuario.png" alt="usuario">
+            <p>Anonimo</p>
+            <mat-icon>{{iconoMostrar}}</mat-icon>            
+        </div>
+
+        <div class="sidebar__user marcador display-none" [routerLink]="['/profile/my-profile']">
+            <p class="sidebar__user-icon">MP</p>
+            <p>My Profile</p>
+        </div>
+
+        <div class="sidebar__user marcador display-none" [routerLink]="['/profile/configuration']">
+            <p class="sidebar__user-icon">S</p>
+            <p>Settings</p>
+        </div>
+
+        <hr class="border-bottom">
+
+        <div class="nav marcador active" [routerLink]="['/dashboard']">
+            <mat-icon class="nav__icon">dashboard</mat-icon>
+            <p>Dashboard</p>
+            <!-- <mat-icon>arrow_drop_down</mat-icon> -->
+        </div>
+        <div class="nav marcador">
+            <mat-icon class="nav__icon">content_paste</mat-icon>
+            <p>Instituciones</p>
+        </div>
+    </div>
 </div>

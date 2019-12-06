@@ -13,11 +13,13 @@ const routes: Routes = [
     children: [
       {
         path:'my-profile',
-        component: MyProfileComponent
+        component: MyProfileComponent,
+        data:{title:'Perfil'}
       },
       {
         path:'configuration',
-        component: ConfigurationComponent
+        component: ConfigurationComponent,
+        data:{title:'Configuración'}
       },
     ]
   }

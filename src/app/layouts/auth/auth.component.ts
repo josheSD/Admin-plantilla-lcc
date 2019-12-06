@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PathNameService } from '../../services/pathName/path-name.service';
 
 @Component({
   selector: 'app-auth',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(
+    public _pathNameService : PathNameService
+  ) 
+  {
+    this._pathNameService.getRutaActualPadre()
+  }
+  
   ngOnInit() {
+    
   }
 
 }

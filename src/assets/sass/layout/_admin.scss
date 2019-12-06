@@ -54,19 +54,21 @@
     }
 }
 
-
-
-
 .main-panel{
     @include mediaquery(small){
-        padding:20px 15px;
+        padding:20px 20px;
+        background-color:#EEEEEE;
     }
 }
 
-.parrafo{
-    color:white;
+.display-block{
+    @include mediaquery(small){
+        display:block;
+    }
 }
 
-.display-block{
-    display:block;
+.contenedor{
+    @include mediaquery(small){
+        padding:20px 0px;
+    }
 }

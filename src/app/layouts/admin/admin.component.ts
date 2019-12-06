@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
+
 declare function IniciarScriptHamburguesa();
 
 @Component({
@@ -10,12 +10,11 @@ declare function IniciarScriptHamburguesa();
 export class AdminComponent implements OnInit {
 
   constructor(
-    private location: Location
-  ) { }
+  ) { 
+  }
 
   ngOnInit() {
     IniciarScriptHamburguesa();
-    console.log(location.pathname);
   }
 
 }

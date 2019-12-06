@@ -11,20 +11,20 @@ const routes: Routes = [
     path: '',redirectTo: 'login',pathMatch: 'full'
   },
   {
-    path:'',component:AdminComponent,
+    path:'',component:AdminComponent,data:{title:'Administrador'},
     children:[
       {path:'',loadChildren:() => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule)},
       {path:'profile',loadChildren:() => import('./modules/profile/profile.module').then(m => m.ProfileModule)}
     ]
   },
   {
-    path:'',component: AuthComponent,
+    path:'',component: AuthComponent,data:{title:'Authentication'},
     children:[
       {path:'',loadChildren:() => import('./pages/pages.module').then(m => m.PagesModule)}
     ]
   },
   {
-    path:'**',component:  NotFoundPageComponent
+    path:'**',component:  NotFoundPageComponent,data:{title:'Pagina no encontrada'}
   }
 ];
 
