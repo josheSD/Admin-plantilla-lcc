@@ -1,7 +1,8 @@
-import { NotFoundPageComponent } from './shared/not-found-page/not-found-page.component';
+
 import { AuthComponent } from './layouts/auth/auth.component';
 import { AdminComponent } from './layouts/admin/admin.component';
 import { NgModule } from '@angular/core';
+import { NotFoundPageComponent } from './shared/not-found-page/not-found-page.component';
 import { Routes, RouterModule } from '@angular/router';
 
 
@@ -12,7 +13,8 @@ const routes: Routes = [
   {
     path:'',component:AdminComponent,
     children:[
-      {path:'',loadChildren:() => import('./dashboard/dashboard.module').then(m => m.DashboardModule)}
+      {path:'',loadChildren:() => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule)},
+      {path:'profile',loadChildren:() => import('./modules/profile/profile.module').then(m => m.ProfileModule)}
     ]
   },
   {

@@ -1,0 +1,178 @@
+.l-navbar{
+    @include mediaquery(small){
+        width:100%;
+    }
+}
+
+.navbar{
+    @include mediaquery(small){
+        display:none;
+    }
+    @include mediaquery(large){
+        display:block;
+        display:grid;
+        grid-template-rows:1fr;
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+.navbar__photo{
+    @include mediaquery(small){
+        justify-self: right;
+        width:40px;
+        height:40px;
+        box-shadow: 0 16px 38px -12px rgba(0,0,0,.56),0 4px 25px 0 rgba(0,0,0,.12),0 8px 10px -5px rgba(0,0,0,.2);
+        cursor:pointer;
+        border-radius:50%;
+    }
+}
+
+
+
+.navbar__button-circle{
+   @include mediaquery(small){
+       justify-self: left;
+        box-shadow: 0 3px 5px -1px rgba(0,0,0,.2),0 6px 10px 0 rgba(0,0,0,.14),0 1px 18px 0 rgba(0,0,0,.12);
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        border:none;
+        text-align: center;
+        border-radius:50%;
+        width:40px;
+        height:40px;
+   }
+}
+
+
+//Quitar luego no sirve solo era test
+.main-menu{
+    color:white;
+}
+
+// Hamburguer 
+.hamburger {
+
+    @include mediaquery(small){
+        padding: 15px 15px;
+        display: inline-block;
+        cursor: pointer;
+        transition-property: opacity, filter;
+        transition-duration: 0.15s;
+        transition-timing-function: linear;
+        font: inherit;
+        color: inherit;
+        text-transform: none;
+        background-color: transparent;
+        border: 0;
+        margin: 0;
+        overflow: visible; 
+
+        &:hover {
+            opacity: 0.7; 
+        }
+        &.is-active:hover {
+            opacity: 0.7; 
+        }
+        &.is-active .hamburger__inner,
+        &.is-active .hamburger__inner::before,
+        &.is-active .hamburger__inner::after{
+            background-color: #000; 
+        }
+    }
+
+
+    @include mediaquery(large){
+        display:none;
+    }
+    
+}
+
+.hamburger__box{
+    @include mediaquery(small){
+        width: 40px;
+        height: 24px;
+        display: inline-block;
+        position: relative; 
+    }
+}
+  
+.hamburger__inner {
+    @include mediaquery(small){
+        display: block;
+        top: 50%;
+        margin-top: -2px; 
+    }
+}
+
+.hamburger__inner, 
+.hamburger__inner::before, 
+.hamburger__inner::after {
+    @include mediaquery(small){
+        width: 40px;
+        height: 4px;
+        background-color: #000;
+        border-radius: 4px;
+        position: absolute;
+        transition-property: transform;
+        transition-duration: 0.15s;
+        transition-timing-function: ease; 
+    }
+}
+.hamburger__inner::before, .hamburger__inner::after {
+    content: "";
+    @include mediaquery(small){
+        display: block; 
+    }
+}
+
+.hamburger__inner::before {
+    @include mediaquery(small){
+        top: -10px; 
+    }
+}
+
+.hamburger__inner::after {
+    @include mediaquery(small){
+        bottom: -10px; 
+    }
+}
+
+.hamburger--slider .hamburger__inner {
+    @include mediaquery(small){
+        top: 2px;
+    } 
+}
+
+.hamburger--slider .hamburger__inner::before {
+    @include mediaquery(small){
+        top: 10px;
+        transition-property: transform, opacity;
+        transition-timing-function: ease;
+        transition-duration: 0.15s; 
+    }
+}
+.hamburger--slider .hamburger__inner::after {
+    @include mediaquery(small){
+        top: 20px; 
+    }
+}
+  
+.hamburger--slider.is-active .hamburger__inner {
+    @include mediaquery(small){
+        transform: translate3d(0, 10px, 0) rotate(45deg); 
+    }
+}
+
+.hamburger--slider.is-active .hamburger__inner::before {
+    @include mediaquery(small){
+        transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+        opacity: 0; 
+    } 
+}
+
+.hamburger--slider.is-active .hamburger__inner::after {
+    @include mediaquery(small){
+        transform: translate3d(0, -20px, 0) rotate(-90deg); 
+    }
+}

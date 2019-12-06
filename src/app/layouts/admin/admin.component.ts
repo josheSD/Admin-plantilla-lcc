@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
+declare function IniciarScriptHamburguesa();
 
 @Component({
   selector: 'app-admin',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private location: Location
+  ) { }
 
   ngOnInit() {
+    IniciarScriptHamburguesa();
+    console.log(location.pathname);
   }
 
 }

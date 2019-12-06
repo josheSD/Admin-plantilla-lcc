@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -8,9 +9,13 @@ import { AppComponent } from './app.component';
 import { AuthComponent } from './layouts/auth/auth.component';
 import { AdminComponent } from './layouts/admin/admin.component';
 
-// Modules
+// My Modules
 import { NotFoundPageModule } from './shared/not-found-page/not-found-page.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SidebarModule } from './shared/sidebar/sidebar.module';
+import { NavbarModule } from './shared/navbar/navbar.module';
+import { FooterModule } from './shared/footer/footer.module';
+import { DashboardModule } from './modules/dashboard/dashboard.module';
+import { ProfileModule } from './modules/profile/profile.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +27,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     NotFoundPageModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SidebarModule,
+    NavbarModule,
+    FooterModule,
+    DashboardModule,
+    ProfileModule
   ],
   providers: [],
   bootstrap: [AppComponent]
