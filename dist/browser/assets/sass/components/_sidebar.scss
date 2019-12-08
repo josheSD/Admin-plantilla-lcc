@@ -1,0 +1,114 @@
+.l-sidebar{
+    @include mediaquery(small){
+        display:grid;
+        grid-template-rows: 70px calc(100vh - 70px);
+        grid-template-columns: 1fr;
+        padding-left:15px;
+        padding-right:15px;
+        color:white;
+    }
+}
+
+.sidebar__enterprise{
+    @include mediaquery(small){
+        display:grid;
+        grid-template-rows:1fr;
+        grid-template-columns: 42px 1fr;
+        grid-column-gap:12px;
+        align-items: center;
+        border-bottom:1px solid #4B4B4B;
+        padding:0px 10px;
+    }
+}
+
+.sidebar__enterprise > p{
+    @include mediaquery(small){
+        text-transform: uppercase;
+        font-weight: 500;
+        line-height: 30px;
+        font-size: 18px;
+    }
+}
+
+.sidebar_photo{
+    @include mediaquery(small){
+        width:100%;
+        height:42px;
+    }
+}
+
+.sidebar__items{
+    @include mediaquery(small){
+        overflow-y:auto;
+    }
+}
+
+.nav,
+.sidebar__user{
+    @include mediaquery(small){
+        display:grid;
+        grid-template-rows:1fr;
+        grid-template-columns:42px 1fr 24px;
+        grid-column-gap:12px;
+        margin:10px 0px;
+        padding:10px 0px;
+        padding-left:10px;
+        padding-right:18px;
+        align-items: center;
+        cursor: pointer;
+        &.active{
+            border-radius:3px;
+            background-color: rgba(200,200,200,.2);
+        }
+    }
+}
+
+.marcador:hover{
+    border-radius:3px;
+    background-color: rgba(200,200,200,.2);
+}
+
+.nav__icon{
+    @include mediaquery(small){
+        padding-left:8px !important;
+    }
+}
+
+.sidebar__user-icon{
+    @include mediaquery(small){
+        width:34px;
+        border-radius:50%;
+        justify-self: center;
+    }
+}
+
+.display-none{
+    @include mediaquery(small){
+        display:none;
+    }
+}
+
+.sidebar__user:nth-child(2) p:first-child,
+.sidebar__user:nth-child(3) p:first-child
+{
+    @include mediaquery(small){
+        text-align: center;
+    }
+}
+
+.parrafo{
+    @include mediaquery(small){
+        color:white;
+    }
+}
+
+.border-bottom{
+    border-bottom:0px solid #4B4B4B;
+}
+
+// con esto solucionamos los dos scroll
+// body{
+//     @include mediaquery(small){
+//         overflow-y:hidden;
+//     }
+// }

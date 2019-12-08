@@ -1,10 +1,14 @@
 <div class="l-navbar">
 
     <!-- Movil Hamburgesa -->
-    <div class="hamburger hamburger--slider" id="hamburger">
-        <span class="hamburger__box">
-            <span class="hamburger__inner"></span>
-        </span>
+    <div class="navbar__movil">
+        <div class="hamburger hamburger--slider" id="hamburger">
+            <span class="hamburger__box">
+                <span class="hamburger__inner"></span>
+            </span>
+        </div>
+            
+        <span>{{rutaActual}}</span>
     </div>
 
     <!-- Table ++  -->
@@ -20,10 +24,9 @@
         <img class="navbar__photo" [matMenuTriggerFor]="usuarioMenu" src="./../../../assets/img/admin/usuario.png"  alt="usuario">
 
         <mat-menu #usuarioMenu="matMenu">
-            <button mat-menu-item (click)="routerDashboard()">Dashboard</button>
-            <button mat-menu-item (click)="routerMyProfile()">My Profile</button>
-            <button mat-menu-item (click)="routerConfiguration()">Settings</button>
-            <button mat-menu-item (click)="routerSingOut()">Sing Out</button>
+            <button mat-menu-item (click)="routerMyProfile()">Mi Perfil</button>
+            <button mat-menu-item (click)="routerConfiguration()">Configuración</button>
+            <button mat-menu-item (click)="routerSingOut()">Salir</button>
         </mat-menu>
 
     </div>

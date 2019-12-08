@@ -13,6 +13,10 @@
 @import 'layout/auth';
 @import 'layout/login.scss';
 @import 'layout/register';
+@import 'layout/admin';
 
 // Importar Componentes
 @import 'components/dashboard';
+@import 'components/navbar';
+@import 'components/footer';
+@import 'components/sidebar';

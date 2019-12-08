@@ -7,18 +7,23 @@
         
         <div class="sidebar__user" (click)="activarAccordion()">
             <img class="sidebar__user-icon" src="../../../assets/img/admin/usuario.png" alt="usuario">
-            <p>Anonimo</p>
+            <p>Usuario</p>
             <mat-icon>{{iconoMostrar}}</mat-icon>            
         </div>
 
         <div class="sidebar__user marcador display-none" [routerLink]="['/profile/my-profile']">
             <p class="sidebar__user-icon">MP</p>
-            <p>My Profile</p>
+            <p>Mi Perfil</p>
         </div>
 
         <div class="sidebar__user marcador display-none" [routerLink]="['/profile/configuration']">
+            <p class="sidebar__user-icon">CO</p>
+            <p>Configuración</p>
+        </div>
+
+        <div class="sidebar__user marcador display-none" [routerLink]="['/login']">
             <p class="sidebar__user-icon">S</p>
-            <p>Settings</p>
+            <p>Salir</p>
         </div>
 
         <hr class="border-bottom">
@@ -27,6 +32,10 @@
             <mat-icon class="nav__icon">dashboard</mat-icon>
             <p>Dashboard</p>
             <!-- <mat-icon>arrow_drop_down</mat-icon> -->
+        </div>
+        <div class="nav marcador">
+            <mat-icon class="nav__icon">content_paste</mat-icon>
+            <p>Instituciones</p>
         </div>
         <div class="nav marcador">
             <mat-icon class="nav__icon">content_paste</mat-icon>

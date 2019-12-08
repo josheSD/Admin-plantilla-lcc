@@ -2,6 +2,7 @@
 :root{
     // Variables de apilamiento (z-index)
     --z-back: -10; 
+    --z-intermedio:5;
     --z-normal: 10;
     --z-tooltip: 20;
     --z-fixed: 30;
@@ -28,8 +29,8 @@ $colores: (
 $breakpoints:(
     small:0px,  
     medium:425px,    
-    large:768px,     
-    xlarge:1200px 
+    large:992px,     
+    xlarge:1440px 
 );
 
 // Typography
@@ -44,6 +45,12 @@ $fonts:(
 
 //Login 
 $topEspacio:45px;
+$sidebar:260px;
+
+//Navbar
+$border-color:#ccc;
+$text-color: #53575A;
+$dark-color:#141618;
 
 
 

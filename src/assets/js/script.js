@@ -2,7 +2,7 @@ function IniciarScriptHamburguesa(){
 
     const showMenu = (toggleId,navId,sidebar) =>{
         const toggle = document.getElementById(toggleId),
-              nav = document.getElementById(navId)
+              nav = document.getElementById(navId),
               mainSidebar = document.getElementById(sidebar);
               
         if(toggle && nav && mainSidebar){

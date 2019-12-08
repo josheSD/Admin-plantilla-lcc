@@ -27,6 +27,7 @@ export class SidebarComponent implements OnInit {
     }else{
       $('.sidebar__user:nth-child(2)').addClass('display-none')
       $('.sidebar__user:nth-child(3)').addClass('display-none')
+      $('.sidebar__user:nth-child(4)').addClass('display-none')
       this.iconoMostrar = 'arrow_drop_down';
     }
   }

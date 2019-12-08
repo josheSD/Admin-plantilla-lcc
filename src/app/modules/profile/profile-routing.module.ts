@@ -14,7 +14,7 @@ const routes: Routes = [
       {
         path:'my-profile',
         component: MyProfileComponent,
-        data:{title:'Perfil'}
+        data:{title:'Mi Perfil'}
       },
       {
         path:'configuration',
