@@ -25,9 +25,9 @@ export class PathNameService {
       ).subscribe((data:any) => {
           let titulo:string;
           if(data.path == ''){
-            titulo = `UGEL Admin`
+            titulo = `Admin`
           }else{
-            titulo = `${data.path} - UGEL Admin`
+            titulo = `${data.path} - Admin`
           }
           this.title.setTitle(titulo);
       });

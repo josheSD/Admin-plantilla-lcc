@@ -16,6 +16,20 @@
     }
 }
 
+.navbar__movil{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar__movil > span{
+    @include mediaquery(small){
+        display:block;
+    }
+    @include mediaquery(large){
+        display:none;
+    }
+}
+
 .navbar__photo{
     @include mediaquery(small){
         justify-self: right;
@@ -51,7 +65,10 @@
 
 .navbar__content > span{
     @include mediaquery(small){
-        isplay:inline-block;
+        display:none;
+    }
+    @include mediaquery(large){
+        display:inline-block;
         margin-left:12px;
         align-self: center;
     }

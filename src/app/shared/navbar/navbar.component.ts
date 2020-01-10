@@ -35,9 +35,9 @@ export class NavbarComponent implements OnInit {
           this.rutaActual = data;
           let titulo:string;
           if(data == ''){
-            titulo = `UGEL Admin`
+            titulo = `Admin`
           }else{
-            titulo = `${data} - UGEL Admin`
+            titulo = `${data} - Admin`
           }
           this.title.setTitle(titulo);
         });
